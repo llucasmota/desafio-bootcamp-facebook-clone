@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
-import PostBody from './components/PostBody';
+import PostHeader from './components/PostHeader';
 import './App.css';
-import Post from './components/PostBody';
+import Post from './components/PostHeader';
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
       <section className="grid">
         <Header />
       </section>
-      <PostBody />
+      <section id="posts-facebook">
+        <PostHeader />
+      </section>
     </>
   );
 }

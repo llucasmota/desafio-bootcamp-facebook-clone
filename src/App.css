@@ -7,6 +7,17 @@ header {
   display: flexbox;
 }
 
+.img-usr {
+  border-radius: 50%;
+}
+
+#posts-facebook {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .svg-udacity {
   width: 7vw;
   height: 15vh;
@@ -84,8 +95,8 @@ header {
 }
 
 @media only screen and (min-width: 800px) {
-  body {
-    width: 99%;
+  header {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -95,6 +106,8 @@ header {
     display: flex;
     flex-wrap: wrap;
   }
+
+
 
   h1 {
     font-size: 2.2rem;
