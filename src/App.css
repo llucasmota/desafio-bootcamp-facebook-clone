@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+body {
+  background-color: #f0f5f5;
+}
+
 header {
   background: #4a90e2;
   color: white;
@@ -9,12 +13,15 @@ header {
 
 .img-usr {
   border-radius: 50%;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 #posts-facebook {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffffff;
 }
 
 
@@ -101,13 +108,14 @@ header {
     margin-right: auto;
   }
 
-  .row {
+  .row-post {
     width: 100%;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+    border-style: ridge;
+
   }
-
-
 
   h1 {
     font-size: 2.2rem;

@@ -29,7 +29,7 @@ class PostHeader extends Component {
     const { posts } = this.state;
     console.log(posts);
     return (
-      <div className="row">
+      <div className="row-post">
         <div className="col-2">
           <img
             className="img-usr"
@@ -38,7 +38,9 @@ class PostHeader extends Component {
           />
         </div>
         <div className="col-10">
+          <h3>Nome do usuário</h3>
           <span>Post aqui</span>
+          <p>Comentário</p>
         </div>
       </div>
     );
