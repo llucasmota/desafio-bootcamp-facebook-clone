@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PostItem from './PostItem';
 
 class PostHeader extends Component {
   state = {
@@ -30,18 +31,7 @@ class PostHeader extends Component {
     console.log(posts);
     return (
       <div className="row-post">
-        <div className="col-2">
-          <img
-            className="img-usr"
-            src="https://dummyimage.com/100x100/000/fff"
-            alt=""
-          />
-        </div>
-        <div className="col-10">
-          <h3>Nome do usuário</h3>
-          <span>Post aqui</span>
-          <p>Comentário</p>
-        </div>
+        <PostItem />
       </div>
     );
   }
