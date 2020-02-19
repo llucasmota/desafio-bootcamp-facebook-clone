@@ -3,13 +3,13 @@
 </h1>
 
 <h3 align="center">
-  Desafio 5: Primeiro projeto com ReactJS
+  Desafio 4: Introdução ao React
 </h3>
 
-<p align="center">“Para quem fica melhor a cada dia, ficar pronto é utopia”!</blockquote>
+<p align="center">“Sucesso não é o resultado de um jogo, mas o destino de uma jornada”!</blockquote>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-05?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-04?color=%2304D361">
 
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
@@ -17,8 +17,8 @@
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-05/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-05?style=social">
+  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-04/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-04?style=social">
   </a>
 </p>
 
@@ -30,51 +30,79 @@
 
 ## :rocket: Sobre o desafio
 
-Nesse desafio você adicionará novas funcionalidades na aplicação que desenvolvemos ao longo desse módulo.
+Crie uma aplicação do zero utilizando **Webpack, Babel, Webpack Dev Server e ReactJS**.
 
-### Funcionalidades
+Nessa aplicação você irá desenvolver uma **interface** semelhante com a do **Facebook** utilizando React.
 
-#### 1. Captando erros
+As informações contidas na interface são **estáticas** e não precisam refletir nenhuma API REST ou back-end.
 
-Adicione um `try/catch` por volta do código presente na função `handleSubmit` presente no componente `Main` e caso um repositório não seja encontrado na API do Github adicione uma borda vermelha por volta do input em que o usuário digitou o nome do repositório.
+### Tela da aplicação
 
-#### 2. Repositório duplicado
+![Facebook](.github/facebook.png)
 
-Antes de fazer a chamada à API na função `handleSubmit` faça uma verificação para ver se o repositório não está duplicado, ou seja, se ele ainda não existe no estado de `repositories`.
+O layout não precisa ficar exatamente igual, você pode utilizar sua criatividade para modificar da maneira que preferir.
 
-Caso exista, dispare um erro, e com isso o código cairá no `catch` do `try/catch` criado na funcionalidade anterior.
+O mais importante é que todos elementos apareçam em tela.
+
+O layout da aplicação está [nesse link](.github/layout.sketch) que pode ser aberto por essa ferramenta gratuita e online: https://www.figma.com/
+
+### Componentes
+
+Na imagem abaixo destaquei cada componente que você criará e abaixo da imagem está a descrição e responsabilidades de cada um:
+
+![Componentes](.github/components.png)
+
+**Header (Amarelo):** Responsável por exibir a logo e o link para acessar o perfil;
+
+**PostList (Verde):** Responsável por armazenar os dados da listagem de post, esses dados devem ficar dentro do `state` do componente e não em uma variável comum, por exemplo:
 
 ```js
-throw new Error('Repositório duplicado');
+class PostList extends Component {
+  state = {
+    posts: [
+      {
+        id: 1,
+        author: {
+          name: 'Julio Alcantara',
+          avatar: 'http://url-da-imagem.com/imagem.jpg',
+        },
+        date: '04 Jun 2019',
+        content: 'Pessoal, alguém sabe se a Rocketseat está contratando?',
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: 'Diego Fernandes',
+              avatar: 'http://url-da-imagem.com/imagem.jpg',
+            },
+            content: 'Conteúdo do comentário',
+          },
+        ],
+      },
+      {
+        id: 2,
+        // Restante dos dados de um novo post
+      },
+    ],
+  };
+}
 ```
 
-#### 3. Filtro de estado
+**Post (Vermelho):** Responsável por exibir os dados do post, esses dados devem vir através de uma propriedade recebida do componente PostList, ou seja, lá no PostList você terá algo assim:
 
-Adicione um filtro de estado na listagem de Issues que criamos no detalhe do repositório. O estado representa se a issue está em aberto, fechada ou uma opção para exibir todas.
-
-Exemplos de requisição:
-
-```
-https://api.github.com/repos/rocketseat/unform/issues?state=all
-https://api.github.com/repos/rocketseat/unform/issues?state=open
-https://api.github.com/repos/rocketseat/unform/issues?state=closed
+```js
+posts.map(post => <Post key={post.id} data={post} />);
 ```
 
-Você pode encontrar a documentação [nesse link](https://developer.github.com/v3/issues/#parameters-1);
+**Comment (Azul):** Responsável por exibir um comentário. Os dados do comentário virão por uma propriedade do componente. Dentro do componente Post você terá um novo `.map` para listar os comentários do post:
 
-#### 4. Paginação
-
-Adicione paginação nas issues listadas no detalhe do repositório. A API do Github lista no máximo 30 issues por página e você pode controlar o número da página atual por um parâmetro no endereço da requisição:
-
+```js
+data.comments.map(comment => <Comment key={comment.id} data={comment} />);
 ```
-https://api.github.com/repos/rocketseat/unform/issues?page=2
-```
-
-Adicione apenas um botão de próxima página e página anterior. O botão de página anterior deve ficar desativado na primeira página.
 
 ## 📅 Entrega
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-05). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-04). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
 
 ## :memo: Licença
 
