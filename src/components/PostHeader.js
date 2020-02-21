@@ -8,7 +8,7 @@ class PostHeader extends Component {
         id: 1,
         author: {
           name: 'Vanessa Romero',
-          avatar: 'https://i.pravatar.cc/150?img=1',
+          avatar: 'https://dummyimage.com/100x100/000/fff',
         },
         date: '04 Jun 2019',
         content: 'Pessoal, alguém sabe se a Rocketseat está contratando?',
@@ -18,7 +18,7 @@ class PostHeader extends Component {
         id: 2,
         author: {
           name: 'Diego Fernandes',
-          avatar: 'https://avatars2.githubusercontent.com/u/2254731?v=4',
+          avatar: 'https://dummyimage.com/100x100/000/fff',
         },
         date: '04 Jun 2019',
         content:
@@ -31,7 +31,9 @@ class PostHeader extends Component {
     console.log(posts);
     return (
       <div className="row-post">
-        <PostItem />
+        {this.state.posts.map(post => (
+          <PostItem key={post} post={post} />
+        ))}
       </div>
     );
   }

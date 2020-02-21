@@ -4,16 +4,12 @@ function PostItem({ post }) {
   return (
     <>
       <div className="col-2">
-        <img
-          className="img-usr"
-          src="https://dummyimage.com/100x100/000/fff"
-          alt=""
-        />
+        <img className="img-usr" src={post.author.avatar} alt="" />
       </div>
       <div className="col-10">
-        <h3></h3>
-        <span></span>
-        <p></p>
+        <h3>{post.author.name}</h3>
+        <span>post.date</span>
+        <p>{post.content}</p>
       </div>
     </>
   );
