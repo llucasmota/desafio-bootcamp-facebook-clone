@@ -28,11 +28,10 @@ class PostHeader extends Component {
   };
   render() {
     const { posts } = this.state;
-    console.log(posts);
     return (
       <>
-        {this.state.posts.map(post => (
-          <PostItem key={post} post={post} />
+        {posts.map(post => (
+          <PostItem key={post.id} post={post} />
         ))}
       </>
     );
