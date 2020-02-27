@@ -3,13 +3,13 @@ import React from 'react';
 function PostItem({ post }) {
   return (
     <>
-      <PostHeader />
+      <PostHeader key={post.id} post={post} />
     </>
   );
 }
 function PostHeader({ post }) {
   return (
-    <div id={post.id} className="row-post">
+    <div className="row-post">
       <div className="col-1">
         <figure className="figure-usr">
           <img className="img-usr" src={post.author.avatar} alt="" />
@@ -24,6 +24,9 @@ function PostHeader({ post }) {
       </div>
     </div>
   );
+}
+function PostComment({ comments }) {
+  return <form action=""></form>;
 }
 
 export default PostItem;
