@@ -1,16 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
-import PostHeader from './components/PostHeader';
+import Post from './components/Post';
 import './App.css';
 
 function App() {
   return (
     <>
-      <section className="grid">
-        <Header />
-      </section>
+      <Header />
       <section className="grid" id="posts-facebook">
-        <PostHeader />
+        <Post />
       </section>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PostItem from './PostItem';
 
-class PostHeader extends Component {
+class Post extends Component {
   state = {
     posts: [
       {
@@ -37,4 +37,4 @@ class PostHeader extends Component {
     );
   }
 }
-export default PostHeader;
+export default Post;
