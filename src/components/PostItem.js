@@ -10,7 +10,7 @@ function PostItem({ post }) {
 function PostHeader({ post }) {
   return (
     <div className="row-post">
-      <div className="col-1">
+      <div className="col-1 img-post">
         <figure className="figure-usr">
           <img className="img-usr" src={post.author.avatar} alt="" />
         </figure>

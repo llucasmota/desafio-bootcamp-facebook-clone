@@ -15,10 +15,7 @@ body {
   padding: 0;
 }
 
-.figure-usr {
-  margin-top: 10%;
-  margin-left: 10%;
-}
+
 
 .img-usr {
   border-radius: 50%;
@@ -29,7 +26,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .svg-facebook {
   width: 5vw;

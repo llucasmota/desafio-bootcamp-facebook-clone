@@ -9,7 +9,7 @@ class Post extends Component {
         id: 1,
         author: {
           name: 'Vanessa Romero',
-          avatar: 'https://dummyimage.com/50x50/000/fff',
+          avatar: 'https://dummyimage.com/45x45/000/fff',
         },
         date: '04 Jun 2019',
         content: 'Pessoal, alguém sabe se a Rocketseat está contratando?',
@@ -19,7 +19,7 @@ class Post extends Component {
         id: 2,
         author: {
           name: 'Diego Fernandes',
-          avatar: 'https://dummyimage.com/50x50/000/fff',
+          avatar: 'https://dummyimage.com/45x45/000/fff',
         },
         date: '04 Jun 2019',
         content:

@@ -9,6 +9,10 @@
   border-radius: 20px;
 }
 
+.img-post {
+  margin-top: 6px;
+}
+
 .row-footer {
   width: 100%;
   display: flex;
@@ -17,4 +21,18 @@
 
 .img-footer {
   width: 100%;
+}
+
+.figure-usr {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+span,
+h3 {
+  margin-left: 3px;
+}
+
+p {
+  margin-left: 15px;
 }
