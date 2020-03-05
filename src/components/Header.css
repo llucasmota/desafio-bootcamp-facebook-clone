@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+
+header {
+  background: #4a90e2;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header.row {
+  display: flex;
+}
+
+.figure-logo {
+  margin-left: 30px;
+}
+
+.svg-facebook {
+  width: 5vw;
+  height: 10vh;
+  margin-left: 90%;
+
+
+}

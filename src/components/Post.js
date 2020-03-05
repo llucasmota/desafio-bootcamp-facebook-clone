@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PostItem from './PostItem';
+import './Post.css';
 
 class Post extends Component {
   state = {

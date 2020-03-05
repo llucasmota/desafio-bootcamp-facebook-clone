@@ -1,5 +1,7 @@
 import React from 'react';
-import profile from '../assets/svg-user.svg';
+import profile from '../assets/perm_identity.svg';
+
+import './Header.css';
 
 function Header() {
   return (
@@ -16,11 +18,7 @@ function Header() {
         </div>
         <div className="col-6">
           <figure className="figure-logo">
-            <img
-              className="svg-udacity"
-              id="header-section logo"
-              src={profile}
-            />
+            <img className="svg-facebook" src={profile} />
           </figure>
         </div>
       </header>
