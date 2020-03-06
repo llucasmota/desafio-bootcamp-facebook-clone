@@ -30,7 +30,9 @@
 
 hr {
   border: 0.5px inset #7d97ad;
-  width: 90%;
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 span,
