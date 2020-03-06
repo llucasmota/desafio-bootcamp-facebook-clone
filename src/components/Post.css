@@ -28,6 +28,11 @@
   margin-left: 15px;
 }
 
+hr {
+  border: 0.5px inset #7d97ad;
+  width: 90%;
+}
+
 span,
 h3 {
   margin-left: 3px;

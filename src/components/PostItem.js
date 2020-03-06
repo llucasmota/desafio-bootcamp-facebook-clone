@@ -22,6 +22,7 @@ function PostHeader({ post }) {
       <div className="col-12">
         <p>{post.content}</p>
       </div>
+      <hr />
     </div>
   );
 }
