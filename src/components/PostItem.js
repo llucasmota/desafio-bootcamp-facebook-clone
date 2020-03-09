@@ -1,9 +1,13 @@
 import React from 'react';
-
+import Comment from './Comment';
 function PostItem({ post }) {
+  console.log(post);
   return (
     <>
       <PostHeader key={post.id} post={post} />
+      {post.comments.map(comment => {
+        <Comment key={comment.id} comment={comment} />;
+      })}
     </>
   );
 }
@@ -20,14 +24,11 @@ function PostHeader({ post }) {
         <span>{post.date}</span>
       </div>
       <div className="col-12">
-        <p>{post.content}</p>
+        <p>dsadas</p>
       </div>
       <hr />
     </div>
   );
-}
-function PostComment({ comments }) {
-  return <form action=""></form>;
 }
 
 export default PostItem;
