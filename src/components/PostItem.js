@@ -40,7 +40,7 @@ function Comment({ comment }) {
           <img className="img-usr" src={comment.author.avatar} alt="" />
         </figure>
       </div>
-      <div className="col-11 border-comment">
+      <div className="border-comment">
         <p>{comment.content}</p>
       </div>
     </>

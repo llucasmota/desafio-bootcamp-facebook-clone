@@ -6,7 +6,7 @@
   -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 20px;
+  border-radius: 2px;
 }
 
 .img-post {
@@ -17,6 +17,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.img-usr {
+  border-radius: 50%;
 }
 
 .img-footer {
@@ -38,6 +42,7 @@ hr {
 span,
 h3 {
   margin-left: 3px;
+  margin-bottom: 2px;
 }
 
 p {
@@ -49,5 +54,17 @@ p {
 .border-comment {
   border-radius: 20px;
   color: #3E3E3E;
-  background-color: darkgray;
+  background-color: #d9d9d9;
+  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+
+}
+
+div.border-comment :only-child {
+  margin-bottom: 15px;
+}
+
+span {
+  color: #bfbfbf;
 }

@@ -17,9 +17,11 @@ header.row {
 }
 
 .svg-facebook {
-  width: 5vw;
-  height: 10vh;
+  width: 50px;
+  height: 50px;
   margin-left: 90%;
+}
 
-
+div.col-6 {
+  margin-top: 2px;
 }

@@ -16,23 +16,12 @@ body {
 }
 
 
-
-.img-usr {
-  border-radius: 50%;
-}
-
 #posts-facebook {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.svg-facebook {
-  width: 5vw;
-  height: 10vh;
-  margin-left: 90%;
-
-}
 
 #header-section {
   line-height: 10%;
