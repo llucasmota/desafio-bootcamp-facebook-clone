@@ -45,3 +45,9 @@ p {
   margin-right: 15px;
   text-align: justify;
 }
+
+.border-comment {
+  border-radius: 20px;
+  color: #3E3E3E;
+  background-color: darkgray;
+}

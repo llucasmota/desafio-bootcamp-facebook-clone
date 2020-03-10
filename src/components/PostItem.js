@@ -1,19 +1,20 @@
 import React from 'react';
-import Comment from './Comment';
+
 function PostItem({ post }) {
-  console.log(post);
+  const { comments } = post;
+  console.log(comments);
   return (
-    <>
+    <div className="row-post">
       <PostHeader key={post.id} post={post} />
-      {post.comments.map(comment => {
-        <Comment key={comment.id} comment={comment} />;
-      })}
-    </>
+      {post.comments.map(comment => (
+        <Comment key={comment.id} id={comment.id} comment={comment} />
+      ))}
+    </div>
   );
 }
 function PostHeader({ post }) {
   return (
-    <div className="row-post">
+    <>
       <div className="col-1 img-post">
         <figure className="figure-usr">
           <img className="img-usr" src={post.author.avatar} alt="" />
@@ -24,10 +25,25 @@ function PostHeader({ post }) {
         <span>{post.date}</span>
       </div>
       <div className="col-12">
-        <p>dsadas</p>
+        <p>{post.content}</p>
       </div>
       <hr />
-    </div>
+    </>
+  );
+}
+
+function Comment({ comment }) {
+  return (
+    <>
+      <div className="col-1 img-post">
+        <figure className="figure-usr">
+          <img className="img-usr" src={comment.author.avatar} alt="" />
+        </figure>
+      </div>
+      <div className="col-11 border-comment">
+        <p>{comment.content}</p>
+      </div>
+    </>
   );
 }
 
