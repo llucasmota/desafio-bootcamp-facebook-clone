@@ -41,7 +41,10 @@ function Comment({ comment }) {
         </figure>
       </div>
       <div className="border-comment">
-        <p>{comment.content}</p>
+        <p>
+          <strong>{comment.author.name} </strong>
+          {comment.content}
+        </p>
       </div>
     </>
   );
