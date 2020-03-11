@@ -100,9 +100,11 @@ posts.map(post => <Post key={post.id} data={post} />);
 data.comments.map(comment => <Comment key={comment.id} data={comment} />);
 ```
 
+## **Instruções de uso do projeto:**
+
 ### Como instalar as dependências do projeto:
 
-Executar na raiz do projeto o comando: `yarn` ou `yarn install`.
+- Executar na raiz do projeto o comando: `yarn` ou `yarn install`.
 
 ### Como iniciar a aplicação:
 
