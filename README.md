@@ -100,6 +100,21 @@ posts.map(post => <Post key={post.id} data={post} />);
 data.comments.map(comment => <Comment key={comment.id} data={comment} />);
 ```
 
+### Como instalar as dependências do projeto:
+
+Executar na raiz do projeto o comando: `yarn` ou `yarn install`.
+
+### Como iniciar a aplicação:
+
+- Executar o seguinte comando na raiz do projeto:
+  `yarn dev`.
+- Para acessá-la: `localhost:8080`.
+
+## Como executar o empacotamento do webpack?
+
+- Executar o seguinte comando na raiz do projeto:
+  `yarn build`.
+
 ## 📅 Entrega
 
 Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-04). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
